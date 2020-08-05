@@ -1,0 +1,174 @@
+:root,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+:root .wrapper,
+body .wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  font-size: 14px;
+  color: #fff;
+  padding-top: 10vh;
+  box-sizing: border-box;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+:root .wrapper .img-box,
+body .wrapper .img-box {
+  width: 70vw;
+  height: 70vw;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+:root .wrapper .img-box img,
+body .wrapper .img-box img {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+:root .wrapper .song-info,
+body .wrapper .song-info {
+  text-align: center;
+}
+:root .wrapper .song-info .song-name,
+body .wrapper .song-info .song-name {
+  font-weight: 400;
+  font-size: 24px;
+}
+:root .wrapper .progress-box,
+body .wrapper .progress-box {
+  display: flex;
+  align-items: center;
+  height: 3vh;
+  justify-content: space-around;
+}
+:root .wrapper .progress-box .progress,
+body .wrapper .progress-box .progress {
+  width: 60%;
+  height: 2vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+:root .wrapper .progress-box .progress .back-bg,
+body .wrapper .progress-box .progress .back-bg {
+  width: 100%;
+  height: 0.5vh;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+:root .wrapper .progress-box .progress .front-bg,
+body .wrapper .progress-box .progress .front-bg {
+  position: absolute;
+  width: 0;
+  height: 0.5vh;
+  background-color: #fff;
+}
+:root .wrapper .progress-box .progress .circle,
+body .wrapper .progress-box .progress .circle {
+  position: absolute;
+  width: 0.7vh;
+  height: 0.7vh;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: -0.35vh;
+}
+:root .wrapper .controls,
+body .wrapper .controls {
+  position: absolute;
+  bottom: 0;
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+:root .wrapper .controls span,
+body .wrapper .controls span {
+  display: inline-block;
+  width: 8vw;
+  height: 8vw;
+  background-size: cover;
+}
+:root .wrapper .controls span.is-like,
+body .wrapper .controls span.is-like {
+  background-image: url('../images/icon-like.png');
+}
+:root .wrapper .controls span.is-like.liking,
+body .wrapper .controls span.is-like.liking {
+  background-image: url('../images/icon-like-solid.png');
+}
+:root .wrapper .controls span.prev,
+body .wrapper .controls span.prev {
+  background-image: url('../images/icon-prev.png');
+}
+:root .wrapper .controls span.play,
+body .wrapper .controls span.play {
+  background-image: url('../images/icon-play.png');
+}
+:root .wrapper .controls span.play.pause,
+body .wrapper .controls span.play.pause {
+  background-image: url('../images/icon-pause.png');
+}
+:root .wrapper .controls span.next,
+body .wrapper .controls span.next {
+  background-image: url('../images/icon-next.png');
+}
+:root .wrapper .controls span.menu,
+body .wrapper .controls span.menu {
+  background-image: url('../images/icon-playlist.png');
+}
+:root .wrapper .play-list-area,
+body .wrapper .play-list-area {
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(#050505, rgba(170, 170, 170, 0.95));
+  height: 40vh;
+  width: 100%;
+  display: none;
+}
+:root .wrapper .play-list-area .title,
+body .wrapper .play-list-area .title {
+  position: fixed;
+  width: 100%;
+  height: 6vh;
+  text-align: center;
+  line-height: 6vh;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+:root .wrapper .play-list-area .play-list,
+body .wrapper .play-list-area .play-list {
+  top: 0;
+  width: 100%;
+  height: 69%;
+  overflow: auto;
+  list-style: none;
+  margin-top: 6vh;
+  padding: 0;
+}
+:root .wrapper .play-list-area .play-list li,
+body .wrapper .play-list-area .play-list li {
+  padding-left: 4vw;
+  line-height: 5vh;
+  border-bottom: 1px solid #ccc;
+}
+:root .wrapper .play-list-area .close,
+body .wrapper .play-list-area .close {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 6vh;
+  line-height: 6vh;
+  font-size: 16px;
+}

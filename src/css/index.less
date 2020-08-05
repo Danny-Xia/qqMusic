@@ -1,0 +1,152 @@
+:root,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        font-size: 14px;
+        color: #fff;
+        padding-top: 10vh;
+        box-sizing: border-box;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .img-box {
+            width: 70vw;
+            height: 70vw;
+            background-color: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            img {
+                width: 80%;
+                height: 80%;
+                border-radius: 50%;
+            }
+        }
+        .song-info {
+            text-align: center;
+            .song-name {
+                font-weight: 400;
+                font-size: 24px;
+            }
+        }
+        .progress-box {
+            display: flex;
+            align-items: center;
+            height: 3vh;
+            justify-content: space-around;
+            .progress {
+                width: 60%;
+                height: 2vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                .back-bg {
+                    // position: absolute;
+                    width: 100%;
+                    height: 0.5vh;
+                    background-color:rgba(255,255,255,.3);
+                }
+                .front-bg {
+                    position: absolute;
+                    // z-index: 10;
+                    // left: 0;
+                    width: 0;
+                    height: 0.5vh;
+                    background-color: #fff;
+                }
+                .circle {
+                    position: absolute;
+                    width: 0.7vh;
+                    height: 0.7vh;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    margin-left: -0.35vh;
+                }
+            }
+        }
+        .controls {
+            position: absolute;
+            bottom: 0;
+            height: 9vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0,0,0,.4);
+            span {
+                display: inline-block;
+                width: 8vw;
+                height: 8vw;
+                background-size: cover;
+                &.is-like {
+                    background-image: url('../images/icon-like.png');
+                    &.liking {
+                        background-image: url('../images/icon-like-solid.png');
+                    }
+                }
+                &.prev {
+                    background-image: url('../images/icon-prev.png');
+                }
+                &.play {
+                    background-image: url('../images/icon-play.png');
+                    &.pause {
+                        background-image: url('../images/icon-pause.png');
+                    }
+                }
+                &.next {
+                    background-image: url('../images/icon-next.png');
+                }
+                &.menu {
+                    background-image: url('../images/icon-playlist.png');
+                }
+            }
+        }
+        .play-list-area {
+            position: absolute;
+            bottom: 0;
+            background-image: linear-gradient(#050505, rgba(170,170,170, .95));
+            height: 40vh;
+            width: 100%;
+            display: none;
+            .title {
+                position: fixed;
+                width: 100%;
+                height: 6vh;
+                text-align: center;
+                line-height: 6vh;
+                font-size: 18px;
+                border-bottom: 1px solid #ccc;
+            }
+            .play-list {
+                top: 0;
+                width: 100%;
+                height: 69%;
+                overflow: auto;
+                list-style: none;
+                margin-top: 6vh;
+                padding: 0;
+                li {
+                    padding-left: 4vw;
+                    line-height: 5vh;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+            .close {
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;
+                height: 6vh;
+                line-height: 6vh;
+                font-size: 16px;
+            }
+        }
+    }
+}
